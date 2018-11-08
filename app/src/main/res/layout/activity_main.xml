@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            >
+            <ImageButton
+                android:id="@+id/ImageButton01"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/one" />
+            <ImageButton
+                android:id="@+id/ImageButton02"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/two" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@id/linearLayout1"
+            android:layout_above="@id/linearLayout3"
+            >
+            <ImageButton
+                android:id="@+id/ImageButton03"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/three" />
+            <ImageButton
+                android:id="@+id/ImageButton04"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/four" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/linearLayout2"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSub1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:text="R"
+                    android:onClick="playGameR"
+                    android:paddingLeft="16dp"
+                    android:textSize="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <Button
+                    android:text="R"
+                    android:onClick="playGameR"
+                    android:paddingLeft="16dp"
+                    android:textSize="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="P"
+                    android:paddingLeft="16dp"
+                    android:onClick="playGameP"
+                    android:textSize="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="S"
+                    android:onClick="playGameS"
+                    android:paddingLeft="16dp"
+                    android:textSize="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--<TextView-->
+        <!--android:id="@+id/textId"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+
+</RelativeLayout>
