@@ -17,14 +17,24 @@
             >
             <ImageButton
                 android:id="@+id/ImageButton01"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/one" />
             <ImageButton
                 android:id="@+id/ImageButton02"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/two" />
+            <ImageButton
+                android:id="@+id/ImageButton03"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/three" />
+            <ImageButton
+                android:id="@+id/ImageButton04"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/four" />
         </LinearLayout>
 
         <LinearLayout
@@ -36,75 +46,62 @@
             android:layout_below="@id/linearLayout1"
             android:layout_above="@id/linearLayout3"
             >
-            <ImageButton
-                android:id="@+id/ImageButton03"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/three" />
-            <ImageButton
-                android:id="@+id/ImageButton04"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/four" />
+
+            <ScrollView
+                android:id="@+id/ScrollView01"
+                android:layout_height="800px"
+                android:layout_width="fill_parent">
+
+                <TextView
+                    android:id="@+id/textId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+            </ScrollView>
         </LinearLayout>
 
+
         <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_below="@id/linearLayout2"
-                android:layout_alignParentBottom="true"
-                android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/linearLayoutSub1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:text="R"
-                    android:onClick="playGameR"
-                    android:paddingLeft="16dp"
-                    android:textSize="40dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                >
-                <Button
-                    android:text="R"
-                    android:onClick="playGameR"
-                    android:paddingLeft="16dp"
-                    android:textSize="40dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:text="P"
-                    android:paddingLeft="16dp"
-                    android:onClick="playGameP"
-                    android:textSize="40dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:text="S"
-                    android:onClick="playGameS"
-                    android:paddingLeft="16dp"
-                    android:textSize="40dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+            android:id="@+id/linearLayout3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            >
+            <Button
+                android:text="R"
+                android:onClick="playGameR"
+                android:paddingLeft="16dp"
+                android:textSize="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="P"
+                android:paddingLeft="16dp"
+                android:onClick="playGameP"
+                android:textSize="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="S"
+                android:onClick="playGameS"
+                android:paddingLeft="16dp"
+                android:textSize="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Reset"
+                android:onClick="reset"
+                android:paddingLeft="16dp"
+                android:textSize="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
         <!--<TextView-->
         <!--android:id="@+id/textId"-->
