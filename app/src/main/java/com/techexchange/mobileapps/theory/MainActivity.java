@@ -13,17 +13,25 @@ public class MainActivity extends AppCompatActivity {
     int current= 2;
     int choiceLeft=2;
     String outputText="\n\n User     System     Win/Lose \n\n\n";
-    private TextView showOutput;
+    public TextView showOutput;
+    public ImageButton btnClickOne;
+    public ImageButton btnClickTwo;
+    public ImageButton btnClickThree;
+    public ImageButton btnClickFour;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final ImageButton btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
-        final ImageButton btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
-        final ImageButton btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
-        final ImageButton btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
+        btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
+        btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
+        btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
+        btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
         showOutput = findViewById(R.id.textId);
         showOutput.setText(outputText);
+        checkButton();
+    }
+    public void checkButton(){
         btnClickOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
+                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -43,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
+                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -54,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
+                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -66,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
+                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-
     public void playGameR(View view){
         if (current==2){
             current=1;
@@ -134,7 +145,11 @@ public class MainActivity extends AppCompatActivity {
         outputText="";
         showOutput.setText(outputText);
         Toast.makeText(MainActivity.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
-
+        btnClickOne.setImageResource(R.drawable.one);
+        btnClickTwo.setImageResource(R.drawable.two);
+        btnClickThree.setImageResource(R.drawable.three);
+        btnClickFour.setImageResource(R.drawable.four);
+        checkButton();
     }
 
 
