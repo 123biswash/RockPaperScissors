@@ -10,8 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    int current= 3;
+
+public class Activity2 extends AppCompatActivity {
+    int current= 2;
     int choiceLeft=2;
     String outputText="\n\n User     System     Win/Lose \n\n\n";
     public TextView showOutput;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_2);
         btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
         btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
         btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
@@ -38,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==1 && choiceLeft>0) {
                     btnClickOne.setImageResource(R.drawable.onegreen);
-                    Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -50,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==2 && choiceLeft>0) {
                     btnClickTwo.setImageResource(R.drawable.twogreen);
-                    Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -62,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==3 && choiceLeft>0) {
                     btnClickThree.setImageResource(R.drawable.threegreen);
-                    Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -75,14 +76,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==4 && choiceLeft>0) {
                     btnClickFour.setImageResource(R.drawable.fourgreen);
-                    Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity2.this, "Wrong answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
     public void playGameR(View view){
         if (current==2){
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         current=0;
         outputText="";
         showOutput.setText(outputText);
-        Toast.makeText(MainActivity.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Activity2.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
         btnClickTwo.setImageResource(R.drawable.two);
         btnClickThree.setImageResource(R.drawable.three);
@@ -154,9 +154,8 @@ public class MainActivity extends AppCompatActivity {
         checkButton();
     }
 
-    public void nextView(View view){
-        Intent intent = new Intent(MainActivity.this, Activity2.class);
-        startActivity(intent);
+    public void backView(View view){
+        finish();
     }
 
 }
