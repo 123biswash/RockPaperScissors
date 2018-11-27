@@ -13,7 +13,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     int current= 3;
     int choiceLeft=2;
-    String userText, systemText, resultText="";
     public TextView userOutput;
     public TextView systemOutput;
     public TextView resultOutput;
@@ -122,46 +121,54 @@ public class MainActivity extends AppCompatActivity {
     public void playGameP(View view){
         if (current==2){
             current=1;
-//            outputText+="Paper\t\t\t\t\t\t\t\t\t\tPaper\t\t\t\t\t\t\t\t\t\tDraw \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
         }else if(current==1){
             current=3;
-//            outputText+="Paper\t\t\t\t\t\t\t\t\t\tRock\t\t\t\t\t\t\t\t\t\tWin \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nWin");
         }else if(current==3){
             current=4;
-//            outputText+="Paper\t\t\t\t\t\t\t\t\t\tPaper\t\t\t\t\t\t\t\t\t\tDraw \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
         }else{
             current=1;
-//            outputText+="Paper\t\t\t\t\t\t\t\t\t\tScissors\t\t\t\t\t\t\t\t\t\tLose \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nLose");
         }
 
     }
     public void playGameS(View view){
         if (current==2){
             current=4;
-//            outputText+="Scissors\t\t\t\t\t\t\t\t\t\tPaper\t\t\t\t\t\t\t\t\t\tWin \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
         }else if(current==1){
             current=3;
-//            outputText+="Scissors\t\t\t\t\t\t\t\t\t\tRock\t\t\t\t\t\t\t\t\t\tLose \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nLose");
         }else if(current==3){
             current=1;
-//            outputText+="Scissors\t\t\t\t\t\t\t\t\t\tPaper\t\t\t\t\t\t\t\t\t\tWin \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
         }else{
             current=1;
-//            outputText+="Scissors\t\t\t\t\t\t\t\t\t\tScissors\t\t\t\t\t\t\t\t\t\tDraw \n";
-//            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nDraw");
         }
     }
     public void reset(View view) {
         current=0;
         initialize();
-        Toast.makeText(MainActivity.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
         btnClickTwo.setImageResource(R.drawable.two);
         btnClickThree.setImageResource(R.drawable.three);
