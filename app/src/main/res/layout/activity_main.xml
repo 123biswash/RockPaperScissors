@@ -11,30 +11,51 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:gravity="center_horizontal"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:paddingTop="20dp"
             >
             <ImageButton
                 android:id="@+id/ImageButton01"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/one" />
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/one"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null" />
             <ImageButton
                 android:id="@+id/ImageButton02"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/two" />
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/two"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null" />
             <ImageButton
                 android:id="@+id/ImageButton03"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/three" />
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/three"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null" />
             <ImageButton
                 android:id="@+id/ImageButton04"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/four" />
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/four"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@null" />
         </LinearLayout>
 
         <LinearLayout
@@ -42,23 +63,70 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_below="@id/linearLayout1"
             android:layout_above="@id/linearLayout3"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="20dp"
             >
 
             <ScrollView
                 android:id="@+id/ScrollView01"
-                android:layout_height="1100px"
-                android:layout_width="fill_parent">
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                >
 
-                <TextView
-                    android:id="@+id/textId"
+                <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="vertical" />
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        >
+
+                        <TextView
+                            android:text="User"
+                            android:id="@+id/textId1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:text="System"
+                            android:id="@+id/textId2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:text="Win/Lose"
+                            android:id="@+id/textId3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
 
             </ScrollView>
+
         </LinearLayout>
 
 
@@ -69,48 +137,78 @@
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
             >
+
             <Button
-                android:text="R"
+                android:text="P"
                 android:onClick="playGameR"
                 android:paddingLeft="16dp"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/rock"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
-                android:text="P"
+                android:text="R"
                 android:paddingLeft="16dp"
                 android:onClick="playGameP"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/paper"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="S"
                 android:onClick="playGameS"
                 android:paddingLeft="16dp"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/scissors"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="Reset"
                 android:onClick="reset"
                 android:paddingLeft="16dp"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/reset"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="Next"
                 android:onClick="nextView"
                 android:paddingLeft="16dp"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/next"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
+
         </LinearLayout>
+
         <!--<TextView-->
         <!--android:id="@+id/textId"-->
         <!--android:layout_width="wrap_content"-->
