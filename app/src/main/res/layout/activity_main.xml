@@ -112,8 +112,19 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:text="Win/Lose"
+                        android:text="Result"
                         android:id="@+id/textId3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:text="Previous"
+                        android:id="@+id/textId4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scrollbars="vertical"
