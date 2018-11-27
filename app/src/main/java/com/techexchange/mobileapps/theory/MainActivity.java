@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public TextView userOutput;
     public TextView systemOutput;
     public TextView resultOutput;
+    public TextView previousOutput;
 
     public ImageButton btnClickOne;
     public ImageButton btnClickTwo;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         userOutput = findViewById(R.id.textId1);
         systemOutput = findViewById(R.id.textId2);
         resultOutput = findViewById(R.id.textId3);
+        previousOutput = findViewById(R.id.textId4);
         initialize();
         checkButton();
     }
@@ -40,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
     public void initialize(){
         userOutput.setText("User\n\n");
         systemOutput.setText("System\n\n");
-        resultOutput.setText("Win/Lose\n\n");
+        resultOutput.setText("Result\n\n");
+        previousOutput.setText("Previous\n\n");
     }
 
     public void checkButton(){
@@ -101,21 +104,26 @@ public class MainActivity extends AppCompatActivity {
             userOutput.append("\nRock");
             systemOutput.append("\nPaper");
             resultOutput.append("\nLose");
+            previousOutput.append("\n0");
+
         }else if(current==1){
             current=3;
             userOutput.append("\nRock");
             systemOutput.append("\nRock");
             resultOutput.append("\nDraw");
+            previousOutput.append("\n0");
         }else if(current==3){
             current=2;
             userOutput.append("\nRock");
             systemOutput.append("\nPaper");
             resultOutput.append("\nLose");
+            previousOutput.append("\n0");
         }else{
             current=3;
             userOutput.append("\nRock");
             systemOutput.append("\nScissors");
             resultOutput.append("\nWin");
+            previousOutput.append("\n0");
         }
     }
     public void playGameP(View view){
@@ -124,21 +132,25 @@ public class MainActivity extends AppCompatActivity {
             userOutput.append("\nPaper");
             systemOutput.append("\nPaper");
             resultOutput.append("\nDraw");
+            previousOutput.append("\n0");
         }else if(current==1){
             current=3;
             userOutput.append("\nPaper");
             systemOutput.append("\nRock");
             resultOutput.append("\nWin");
+            previousOutput.append("\n0");
         }else if(current==3){
             current=4;
             userOutput.append("\nPaper");
             systemOutput.append("\nPaper");
             resultOutput.append("\nDraw");
+            previousOutput.append("\n0");
         }else{
             current=1;
             userOutput.append("\nPaper");
             systemOutput.append("\nScissors");
             resultOutput.append("\nLose");
+            previousOutput.append("\n0");
         }
 
     }
@@ -148,21 +160,25 @@ public class MainActivity extends AppCompatActivity {
             userOutput.append("\nScissors");
             systemOutput.append("\nPaper");
             resultOutput.append("\nWin");
+            previousOutput.append("\n0");
         }else if(current==1){
             current=3;
             userOutput.append("\nScissors");
             systemOutput.append("\nRock");
             resultOutput.append("\nLose");
+            previousOutput.append("\n0");
         }else if(current==3){
             current=1;
             userOutput.append("\nScissors");
             systemOutput.append("\nPaper");
             resultOutput.append("\nWin");
+            previousOutput.append("\n0");
         }else{
             current=1;
             userOutput.append("\nScissors");
             systemOutput.append("\nScissors");
             resultOutput.append("\nDraw");
+            previousOutput.append("\n0");
         }
     }
     public void reset(View view) {

@@ -112,7 +112,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:text="Win/Lose"
+                        android:text="Result"
                         android:id="@+id/textId3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

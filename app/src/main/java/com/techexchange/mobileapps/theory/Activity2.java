@@ -41,7 +41,7 @@ public class Activity2 extends AppCompatActivity {
     public void initialize(){
         userOutput.setText("User\n\n");
         systemOutput.setText("System\n\n");
-        resultOutput.setText("Win/Lose\n\n");
+        resultOutput.setText("Result\n\n");
     }
 
     public void checkButton(){
