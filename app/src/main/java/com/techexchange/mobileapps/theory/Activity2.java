@@ -25,10 +25,10 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-        btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
-        btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
-        btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
-        btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
+        btnClickOne = findViewById(R.id.ImageButton01);
+        btnClickTwo= findViewById(R.id.ImageButton02);
+        btnClickThree= findViewById(R.id.ImageButton03);
+        btnClickFour = findViewById(R.id.ImageButton04);
         showOutput = findViewById(R.id.textId);
         showOutput.setText(outputText);
         checkButton();
