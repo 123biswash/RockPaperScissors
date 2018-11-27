@@ -12,5 +12,5 @@ Here's a walkthrough of implemented user stories:
 
 ## License
 
-Copyright 2018 Biswash Adhikari
+Copyright © 2018 Biswash Adhikari and Team.
 
