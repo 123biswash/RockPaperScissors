@@ -26,7 +26,7 @@ public class Activity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_2);
         btnClickOne = findViewById(R.id.ImageButton01);
         btnClickTwo= findViewById(R.id.ImageButton02);
         btnClickThree= findViewById(R.id.ImageButton03);
