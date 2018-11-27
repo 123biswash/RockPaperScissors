@@ -13,8 +13,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     int current= 3;
     int choiceLeft=2;
-    String outputText="\n\n User     System     Win/Lose \n\n\n";
-    public TextView showOutput;
+    public TextView userOutput;
+    public TextView systemOutput;
+    public TextView resultOutput;
+
     public ImageButton btnClickOne;
     public ImageButton btnClickTwo;
     public ImageButton btnClickThree;
@@ -24,14 +26,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
-        btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
-        btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
-        btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
-        showOutput = findViewById(R.id.textId);
-        showOutput.setText(outputText);
+        btnClickOne = findViewById(R.id.ImageButton01);
+        btnClickTwo= findViewById(R.id.ImageButton02);
+        btnClickThree= findViewById(R.id.ImageButton03);
+        btnClickFour = findViewById(R.id.ImageButton04);
+        userOutput = findViewById(R.id.textId1);
+        systemOutput = findViewById(R.id.textId2);
+        resultOutput = findViewById(R.id.textId3);
+        initialize();
         checkButton();
     }
+
+    public void initialize(){
+        userOutput.setText("User\n\n");
+        systemOutput.setText("System\n\n");
+        resultOutput.setText("Win/Lose\n\n");
+    }
+
     public void checkButton(){
         btnClickOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -53,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -65,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -78,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
-                    Toast.makeText(MainActivity.this, "Wrong answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -87,66 +98,77 @@ public class MainActivity extends AppCompatActivity {
     public void playGameR(View view){
         if (current==2){
             current=1;
-            outputText+="Rock   Paper   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nRock");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nLose");
         }else if(current==1){
             current=3;
-            outputText+="Rock   Rock   Draw \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nRock");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nDraw");
         }else if(current==3){
             current=2;
-            outputText+="Rock   Paper   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nRock");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nLose");
         }else{
             current=3;
-            outputText+="Rock   Scissors   Win \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nRock");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nWin");
         }
     }
     public void playGameP(View view){
         if (current==2){
             current=1;
-            outputText+="Paper   Paper   Draw \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
         }else if(current==1){
             current=3;
-            outputText+="Paper   Rock   Win \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nWin");
         }else if(current==3){
             current=4;
-            outputText+="Paper   Paper   Draw \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
         }else{
             current=1;
-            outputText+="Paper   Scissors   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nPaper");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nLose");
         }
 
     }
     public void playGameS(View view){
         if (current==2){
             current=4;
-            outputText+="Scissors   Paper   Win \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
         }else if(current==1){
             current=3;
-            outputText+="Scissors   Rock   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nLose");
         }else if(current==3){
             current=1;
-            outputText+="Scissors   Paper   Win \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
         }else{
             current=1;
-            outputText+="Scissors   Scissors   Draw \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissors");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nDraw");
         }
     }
     public void reset(View view) {
         current=0;
-        outputText="";
-        showOutput.setText(outputText);
-        Toast.makeText(MainActivity.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
+        initialize();
+        Toast.makeText(this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
         btnClickTwo.setImageResource(R.drawable.two);
         btnClickThree.setImageResource(R.drawable.three);
