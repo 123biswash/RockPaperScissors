@@ -19,22 +19,23 @@
                 android:id="@+id/ImageButton01"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/one" />
+                android:src="@drawable/onek" />
             <ImageButton
                 android:id="@+id/ImageButton02"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/two" />
+                android:src="@drawable/twok" />
             <ImageButton
                 android:id="@+id/ImageButton03"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/three" />
+                android:src="@drawable/threek" />
             <ImageButton
                 android:id="@+id/ImageButton04"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/four" />
+                android:src="@drawable/fourk" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -49,14 +50,68 @@
 
             <ScrollView
                 android:id="@+id/ScrollView01"
-                android:layout_height="1100px"
-                android:layout_width="fill_parent">
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                >
 
-                <TextView
-                    android:id="@+id/textId"
+                <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="vertical" />
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        >
+
+                        <TextView
+                            android:text="User"
+                            android:id="@+id/textId1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:text="System"
+                            android:id="@+id/textId2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:text="Result"
+                            android:id="@+id/textId3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:text="PrevResult"
+                            android:id="@+id/textId4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
 
             </ScrollView>
         </LinearLayout>
@@ -73,27 +128,39 @@
             <Button
                 android:text="R"
                 android:onClick="playGameR"
-
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/rock"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="P"
-
                 android:onClick="playGameP"
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/paper"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="S"
                 android:onClick="playGameS"
-
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/scissors"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 
@@ -109,19 +176,27 @@
             <Button
                 android:text="Reset"
                 android:onClick="reset"
-
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/reset"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
             <Button
                 android:text="Next"
                 android:onClick="nextView"
-
                 android:textSize="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/transparent"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/next"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center_horizontal" />
         </LinearLayout>
         <!--<TextView-->
         <!--android:id="@+id/textId"-->

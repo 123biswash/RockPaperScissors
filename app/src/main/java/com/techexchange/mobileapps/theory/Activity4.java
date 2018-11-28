@@ -14,40 +14,46 @@ import android.widget.Toast;
 public class Activity4 extends AppCompatActivity {
     int current= 2;
     int choiceLeft=2;
-    int Score3= 0;
-    String outputText="\n\n User     System     Win/Lose \n\n\n";
-    public TextView showOutput;
+
     public ImageButton btnClickOne;
     public ImageButton btnClickTwo;
     public ImageButton btnClickThree;
     public ImageButton btnClickFour;
     public ImageButton btnClickFive;
-
+    public TextView userOutput;
+    public TextView systemOutput;
+    public TextView resultOutput;
+    public TextView prevResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_4);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            Score3 = extras.getInt("key1");
-        }
+
         btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
         btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
         btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
         btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
         btnClickFive = (ImageButton) findViewById(R.id.ImageButton05);
-        outputText="Score3: "+ Score3 + outputText;
-        showOutput = findViewById(R.id.textId);
-        showOutput.setText(outputText);
+        userOutput = findViewById(R.id.textId1);
+        systemOutput = findViewById(R.id.textId2);
+        resultOutput = findViewById(R.id.textId3);
+        prevResult = findViewById(R.id.textId4);
+        initialize();
         checkButton();
+    }
+    public void initialize(){
+        userOutput.setText("User\n\n");
+        systemOutput.setText("System\n\n");
+        resultOutput.setText("Result\n\n");
+        prevResult.setText("PrevResult\n\n");
     }
     public void checkButton(){
         btnClickOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(current==1 && choiceLeft>0) {
-                    btnClickOne.setImageResource(R.drawable.onegreen);
-                    Score3+=1;
+                    btnClickOne.setImageResource(R.drawable.onegreenk);
+
                     Toast.makeText(Activity4.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -59,8 +65,8 @@ public class Activity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(current==2 && choiceLeft>0) {
-                    btnClickTwo.setImageResource(R.drawable.twogreen);
-                    Score3+=1;
+                    btnClickTwo.setImageResource(R.drawable.twogreenk);
+
                     Toast.makeText(Activity4.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -72,8 +78,8 @@ public class Activity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(current==3 && choiceLeft>0) {
-                    btnClickThree.setImageResource(R.drawable.threegreen);
-                    Score3+=1;
+                    btnClickThree.setImageResource(R.drawable.threegreenk);
+
                     Toast.makeText(Activity4.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -86,8 +92,8 @@ public class Activity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(current==4 && choiceLeft>0) {
-                    btnClickFour.setImageResource(R.drawable.fourgreen);
-                    Score3+=1;
+                    btnClickFour.setImageResource(R.drawable.fourgreenk);
+
                     Toast.makeText(Activity4.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -99,8 +105,8 @@ public class Activity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(current==5 && choiceLeft>0) {
-                    btnClickFour.setImageResource(R.drawable.five);
-                    Score3+=1;
+                    btnClickFour.setImageResource(R.drawable.fivegreenk);
+
                     Toast.makeText(Activity4.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -112,87 +118,131 @@ public class Activity4 extends AppCompatActivity {
     public void playGameR(View view){
         if (current==2){
             current=5;
-            outputText+="Rock   Rock   Draw 2\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n2");
         }else if(current==1){
             current=2;
-            outputText+="Rock   Paper   Lose 1\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nLose");
+            prevResult.append("\n1");
         }else if(current==3){
             current=4;
-            outputText+="Rock   Scissors   Win 3\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nWin");
+            prevResult.append("\n3");
         }else if(current==5){
             current=4;
-            outputText+="Rock   Rock   Draw 5\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n5");
         }else{
             current=2;
-            outputText+="Rock   Paper   Lose 4\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nLose");
+            prevResult.append("\n4");
         }
     }
     public void playGameP(View view){
         if (current==2){
             current=5;
-            outputText+="Paper   Rock   Win 2\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nWin");
+            prevResult.append("\n2");
+
         }else if(current==1){
             current=5;
-            outputText+="Paper   Paper   Draw 1\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n1");
         }else if(current==3){
             current=5;
-            outputText+="Paper   Scissors   Draw 3\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nLose");
+            prevResult.append("\n3");
         }else if(current==5){
             current=2;
-            outputText+="Paper   Rock   Win 5\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nWin");
+            prevResult.append("\n5");
         }else{
             current=5;
-            outputText+="Paper   Paper   Draw 4\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n4");
         }
 
     }
     public void playGameS(View view){
         if (current==2){
             current=3;
-            outputText+="Scissors   Rock   Lose 2\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nScissors");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nLose");
+            prevResult.append("\n2");
         }else if(current==1){
             current=3;
-            outputText+="Scissors   Paper   Win 1\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
+            prevResult.append("\n1");
         }else if(current==3){
             current=5;
-            outputText+="Scissors   Scissors   Draw 3\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nScissors");
+            systemOutput.append("\nScissors");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n3");
         }else if(current==5){
             current=1;
-            outputText+="Scissors   Rock   Lose 4\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nScissors");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nLose");
+            prevResult.append("\n5");
         }else{
             current=2;
-            outputText+="Scissors   Paper   Win 5\n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nScissors");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
+            prevResult.append("\n4");
+
         }
     }
     public void reset(View view) {
         current=0;
-        outputText="";
-        showOutput.setText(outputText);
         Toast.makeText(Activity4.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
-        btnClickOne.setImageResource(R.drawable.one);
-        btnClickTwo.setImageResource(R.drawable.two);
-        btnClickThree.setImageResource(R.drawable.three);
-        btnClickFour.setImageResource(R.drawable.four);
+        btnClickOne.setImageResource(R.drawable.onek);
+        btnClickTwo.setImageResource(R.drawable.twok);
+        btnClickThree.setImageResource(R.drawable.threek);
+        btnClickFour.setImageResource(R.drawable.fourk);
+        btnClickFour.setImageResource(R.drawable.fivek);
         checkButton();
     }
-
     public void backView(View view){
         finish();
     }
-
 }

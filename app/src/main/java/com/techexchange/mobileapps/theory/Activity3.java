@@ -17,29 +17,37 @@ public class Activity3 extends AppCompatActivity {
     public TextView showOutput;
     public ImageButton btnClickOne;
     public ImageButton btnClickTwo;
-    public ImageButton btnClickThree;
-    public ImageButton btnClickFour;
+    public TextView userOutput;
+    public TextView systemOutput;
+    public TextView resultOutput;
+    public TextView prevResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            Score2 = extras.getInt("key1");
-        }
+
         btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
         btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
-        showOutput = findViewById(R.id.textId);
-        outputText="Score2: "+ Score2 + outputText;
-        showOutput.setText(outputText);
+        userOutput = findViewById(R.id.textId1);
+        systemOutput = findViewById(R.id.textId2);
+        resultOutput = findViewById(R.id.textId3);
+        prevResult = findViewById(R.id.textId4);
+        initialize();
         checkButton();
+    }
+    public void initialize(){
+        userOutput.setText("User\n\n");
+        systemOutput.setText("System\n\n");
+        resultOutput.setText("Result\n\n");
+        prevResult.setText("PrevResult\n\n");
     }
     public void checkButton(){
         btnClickOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(current==1 && choiceLeft>0) {
-                    btnClickOne.setImageResource(R.drawable.onegreen);
+                    btnClickOne.setImageResource(R.drawable.onegreenk);
                     Score2+=1;
                     Toast.makeText(Activity3.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
@@ -52,7 +60,7 @@ public class Activity3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(current==2 && choiceLeft>0) {
-                    btnClickTwo.setImageResource(R.drawable.twogreen);
+                    btnClickTwo.setImageResource(R.drawable.twogreenk);
                     Score2+=1;
                     Toast.makeText(Activity3.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
@@ -65,23 +73,35 @@ public class Activity3 extends AppCompatActivity {
     public void playGameR(View view){
         if (current==1){
             current=2;
-            outputText+="Rock   Paper   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nRock");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nLose");
+            prevResult.append("\n1");
+
         }else{
             current=1;
-            outputText+="Rock   Rock   Draw \n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nRock");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n2");
         }
     }
     public void playGameP(View view){
         if (current==1){
             current=2;
-            outputText+="Paper   Paper   Draw \n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nDraw");
+            prevResult.append("\n1");
         }else{
             current=1;
-            outputText+="Paper   Rock   Win \n";
-            showOutput.setText(outputText);
+
+            userOutput.append("\nPaper");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nWin");
+            prevResult.append("\n2");
         }
 
     }
@@ -89,30 +109,33 @@ public class Activity3 extends AppCompatActivity {
         if (current==1){
             current=2;
             outputText+="Scissor   Paper   Win \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissor");
+            systemOutput.append("\nPaper");
+            resultOutput.append("\nWin");
+            prevResult.append("\n1");
+
         }else{
             current=1;
             outputText+="Scissor   Rock   Lose \n";
-            showOutput.setText(outputText);
+            userOutput.append("\nScissor");
+            systemOutput.append("\nRock");
+            resultOutput.append("\nLose");
+            prevResult.append("\n2");
         }
     }
     public void reset(View view) {
         current=0;
-        outputText="";
-        showOutput.setText(outputText);
+        initialize();
         Toast.makeText(Activity3.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
-        btnClickOne.setImageResource(R.drawable.one);
-        btnClickTwo.setImageResource(R.drawable.two);
-        btnClickThree.setImageResource(R.drawable.three);
-        btnClickFour.setImageResource(R.drawable.four);
+        btnClickOne.setImageResource(R.drawable.onek);
+        btnClickTwo.setImageResource(R.drawable.twok);
         checkButton();
     }
 
     public void nextView(View view){
-        outputText="";
-        showOutput.setText(outputText);
+
         Intent intent = new Intent(Activity3.this, Activity4.class);
-        intent.putExtra("key3", Score2);
+
         startActivity(intent);
     }
     public void backView(View view){
