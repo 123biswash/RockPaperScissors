@@ -17,23 +17,45 @@ tools:context=".Activity2">
     >
     <ImageButton
         android:id="@+id/ImageButton01"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:scaleType="centerInside"
+        android:padding="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
         android:src="@drawable/onek" />
     <ImageButton
         android:id="@+id/ImageButton02"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:scaleType="centerInside"
+        android:padding="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
         android:src="@drawable/twok" />
     <ImageButton
         android:id="@+id/ImageButton03"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerInside"
+        android:padding="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
         android:src="@drawable/threek" />
     <ImageButton
         android:id="@+id/ImageButton04"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerInside"
+        android:padding="5dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
         android:src="@drawable/fourk" />
 
 </LinearLayout>
