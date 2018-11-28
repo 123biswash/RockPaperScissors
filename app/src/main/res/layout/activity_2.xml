@@ -19,8 +19,8 @@
         >
         <ImageButton
             android:id="@+id/ImageButton01"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/one"
             android:scaleType="centerInside"
             android:padding="5dp"
@@ -29,8 +29,8 @@
             android:background="@null" />
         <ImageButton
             android:id="@+id/ImageButton02"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/two"
             android:scaleType="centerInside"
             android:padding="5dp"
@@ -39,8 +39,8 @@
             android:background="@null" />
         <ImageButton
             android:id="@+id/ImageButton03"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/three"
             android:scaleType="centerInside"
             android:padding="5dp"
@@ -49,8 +49,8 @@
             android:background="@null" />
         <ImageButton
             android:id="@+id/ImageButton04"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/four"
             android:scaleType="centerInside"
             android:padding="5dp"
