@@ -67,20 +67,20 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@id/linearLayout4"
             android:layout_gravity="center"
             >
             <Button
                 android:text="R"
                 android:onClick="playGameR"
-                android:paddingLeft="16dp"
+
                 android:textSize="10dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <Button
                 android:text="P"
-                android:paddingLeft="16dp"
+
                 android:onClick="playGameP"
                 android:textSize="10dp"
                 android:textColor="@color/colorPrimaryDark"
@@ -89,15 +89,27 @@
             <Button
                 android:text="S"
                 android:onClick="playGameS"
-                android:paddingLeft="16dp"
+
                 android:textSize="10dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            >
+
             <Button
                 android:text="Reset"
                 android:onClick="reset"
-                android:paddingLeft="16dp"
+
                 android:textSize="10dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"
@@ -105,7 +117,7 @@
             <Button
                 android:text="Next"
                 android:onClick="nextView"
-                android:paddingLeft="16dp"
+
                 android:textSize="10dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"

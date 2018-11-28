@@ -14,7 +14,8 @@ import android.widget.Toast;
 public class Activity2 extends AppCompatActivity {
     int current= 2;
     int choiceLeft=2;
-    String outputText="\n\n User     System     Win/Lose \n\n\n";
+    int Score1=0;
+    String outputText="Score: "+Score1+"\n\n User     System     Win/Lose PrevState\n\n\n";
     public TextView showOutput;
     public ImageButton btnClickOne;
     public ImageButton btnClickTwo;
@@ -23,13 +24,19 @@ public class Activity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            Score1 = extras.getInt("key");
+        }
         btnClickOne = (ImageButton) findViewById(R.id.ImageButton01);
         btnClickTwo=(ImageButton) findViewById(R.id.ImageButton02);
         btnClickThree=(ImageButton) findViewById(R.id.ImageButton03);
         btnClickFour = (ImageButton) findViewById(R.id.ImageButton04);
         showOutput = findViewById(R.id.textId);
+        outputText="Score: "+ Score1 + outputText;
         showOutput.setText(outputText);
         checkButton();
     }
@@ -39,6 +46,7 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==1 && choiceLeft>0) {
                     btnClickOne.setImageResource(R.drawable.onegreen);
+                    Score1+=1;
                     Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -51,6 +59,7 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==2 && choiceLeft>0) {
                     btnClickTwo.setImageResource(R.drawable.twogreen);
+                    Score1+=1;
                     Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -63,6 +72,7 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==3 && choiceLeft>0) {
                     btnClickThree.setImageResource(R.drawable.threegreen);
+                    Score1+=1;
                     Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -76,6 +86,7 @@ public class Activity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(current==4 && choiceLeft>0) {
                     btnClickFour.setImageResource(R.drawable.fourgreen);
+                    Score1+=1;
                     Toast.makeText(Activity2.this, "Congratulations!", Toast.LENGTH_SHORT).show();
                 }else{
                     choiceLeft=choiceLeft-1;
@@ -154,8 +165,14 @@ public class Activity2 extends AppCompatActivity {
         checkButton();
     }
 
+    public void nextView(View view){
+        outputText="";
+        showOutput.setText(outputText);
+        Intent intent = new Intent(Activity2.this, Activity3.class);
+        intent.putExtra("key1", Score1);
+        startActivity(intent);
+    }
     public void backView(View view){
         finish();
     }
-
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2">
+    tools:context=".Activity4">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -35,6 +35,12 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/four" />
+        <ImageButton
+            android:id="@+id/ImageButton05"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/five" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -110,13 +116,6 @@
             android:text="Reset"
             android:onClick="reset"
 
-            android:textSize="10dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Next"
-            android:onClick="nextView"
             android:textSize="10dp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_width="wrap_content"

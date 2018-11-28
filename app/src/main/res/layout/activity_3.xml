@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2">
+    tools:context=".Activity3">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -25,16 +25,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/two" />
-        <ImageButton
-            android:id="@+id/ImageButton03"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/three" />
-        <ImageButton
-            android:id="@+id/ImageButton04"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/four" />
+
     </LinearLayout>
 
     <LinearLayout
