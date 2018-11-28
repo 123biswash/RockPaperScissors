@@ -1,240 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".Activity2">
-
-<LinearLayout
-    android:id="@+id/linearLayout1"
-    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_gravity="center"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentTop="true"
-    >
-    <ImageButton
-        android:id="@+id/ImageButton01"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"
-        android:src="@drawable/onek" />
-    <ImageButton
-        android:id="@+id/ImageButton02"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"
-        android:src="@drawable/twok" />
-    <ImageButton
-        android:id="@+id/ImageButton03"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"
-        android:src="@drawable/threek" />
-    <ImageButton
-        android:id="@+id/ImageButton04"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@null"
-        android:src="@drawable/fourk" />
-
-</LinearLayout>
-
-<LinearLayout
-    android:id="@+id/linearLayout2"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_gravity="center_horizontal"
-    android:layout_below="@id/linearLayout1"
-    android:layout_above="@id/linearLayout3"
-    android:paddingTop="20dp"
-    android:paddingHorizontal="20dp"
+    android:layout_height="match_parent"
+    tools:context=".Activity2"
     >
 
-    <ScrollView
-        android:id="@+id/ScrollView01"
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"
-        android:layout_marginTop="20dp"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="20dp"
+        >
+        <ImageButton
+            android:id="@+id/ImageButton01"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/one"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null" />
+        <ImageButton
+            android:id="@+id/ImageButton02"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/two"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null" />
+        <ImageButton
+            android:id="@+id/ImageButton03"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/three"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null" />
+        <ImageButton
+            android:id="@+id/ImageButton04"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/four"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
+        android:layout_below="@id/linearLayout1"
+        android:layout_above="@id/linearLayout3"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="20dp"
         >
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*"
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             >
 
-            <TableRow
-                android:layout_width="0dp"
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
                 >
 
-                <TextView
-                    android:text="User"
-                    android:id="@+id/textId1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <TableRow
+                    android:layout_width="0dp"
+                    >
 
-                <TextView
-                    android:text="System"
-                    android:id="@+id/textId2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:text="User"
+                        android:id="@+id/textId1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:text="Result"
-                    android:id="@+id/textId3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:text="PrevResult"
-                    android:id="@+id/textId4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:text="System"
+                        android:id="@+id/textId2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            </TableRow>
+                    <TextView
+                        android:text="Result"
+                        android:id="@+id/textId3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-        </TableLayout>
+                    <TextView
+                        android:text="Previous"
+                        android:id="@+id/textId4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-    </ScrollView>
+                </TableRow>
 
-</LinearLayout>
+            </TableLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
 
 
-<LinearLayout
-    android:id="@+id/linearLayout3"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_above="@id/linearLayout4"
-    android:layout_gravity="center"
-    >
-    <Button
-        android:text="R"
-        android:onClick="playGameR"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/rock"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal" />
-    <Button
-        android:text="P"
-        android:onClick="playGameP"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/paper"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal" />
-    <Button
-        android:text="S"
-        android:onClick="playGameS"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/scissors"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingVertical="20dp"
+        >
 
-</LinearLayout>
+        <Button
+            android:text="P"
+            android:onClick="playGameR"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rock"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:text="R"
+            android:onClick="playGameP"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/paper"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:text="S"
+            android:onClick="playGameS"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/scissors"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:text="Reset"
+            android:onClick="reset"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/reset"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:text="Next"
+            android:onClick="nextView"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/next"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:text="Back"
+            android:onClick="backView"
+            android:textSize="10dp"
+            android:textColor="@android:color/transparent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:scaleType="centerInside"
+            android:padding="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_horizontal" />
 
-<LinearLayout
-    android:id="@+id/linearLayout4"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_alignParentBottom="true"
-    android:layout_gravity="center"
-    >
-
-    <Button
-        android:text="Reset"
-        android:onClick="reset"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/reset"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"  />
-    <Button
-        android:text="Next"
-        android:onClick="nextView"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/next"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"  />
-    <Button
-        android:text="Back"
-        android:onClick="backView"
-        android:textSize="10dp"
-        android:textColor="@android:color/transparent"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/back"
-        android:scaleType="centerInside"
-        android:padding="5dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center_horizontal"  />
-</LinearLayout>
-
+    </LinearLayout>
 
 </RelativeLayout>
