@@ -7,10 +7,10 @@
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://media.giphy.com/media/d96shItO9PbgqpGbRe/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## License
 
-Copyright 2018 Biswash Adhikari
+Copyright © 2018 Biswash Adhikari and Team.
 
