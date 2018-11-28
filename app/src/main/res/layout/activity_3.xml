@@ -17,8 +17,8 @@
 
         <ImageButton
             android:id="@+id/ImageButton01"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:scaleType="centerInside"
             android:padding="5dp"
             android:layout_marginHorizontal="5dp"
@@ -28,8 +28,8 @@
 
         <ImageButton
             android:id="@+id/ImageButton02"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:scaleType="centerInside"
             android:padding="5dp"
             android:layout_marginHorizontal="5dp"
