@@ -237,7 +237,7 @@ public class Activity4 extends AppCompatActivity {
     }
 
     public void reset(View view) {
-        current = 0;
+        current = 2;
         Toast.makeText(Activity4.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
         btnClickTwo.setImageResource(R.drawable.two);

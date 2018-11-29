@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reset(View view) {
-        current = 0;
+        current = 1;
         initialize();
         Toast.makeText(MainActivity.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
@@ -198,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextView(View view) {
+
         Intent intent = new Intent(MainActivity.this, Activity2.class);
         startActivity(intent);
     }

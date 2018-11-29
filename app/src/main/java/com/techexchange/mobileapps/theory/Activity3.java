@@ -83,7 +83,6 @@ public class Activity3 extends AppCompatActivity {
 
         } else {
             current = 1;
-
             userOutput.append("\nRock");
             systemOutput.append("\nRock");
             resultOutput.append("\nDraw");
@@ -130,7 +129,7 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void reset(View view) {
-        current = 0;
+        current = 1;
         initialize();
         Toast.makeText(Activity3.this, "Game has been reset!", Toast.LENGTH_SHORT).show();
         btnClickOne.setImageResource(R.drawable.one);
